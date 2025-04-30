@@ -1,17 +1,13 @@
-import React from "react";
-
-function Search(props) {
+function Search({ searchTerm, onSearch }) {
   return (
     <div>
       <label htmlFor="search">Search: </label>
       <input
         id="search"
         type="text"
-        value={props.searchTerm}
-        onChange={(event) => props.onSearch(event.target.value)}
+        value={searchTerm}
+        onChange={(event) => onSearch(event.target.value)}
       />
     </div>
   );
 }
-
-export default Search;
