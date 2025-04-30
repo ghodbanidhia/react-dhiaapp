@@ -1,10 +1,13 @@
-import React from "react";
-import MyComponent from "./mycomponent";
+import React, { useState } from "react";
+import Search from "./Search";
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
+
   return (
     <div>
-      <MyComponent />
+      <Search searchTerm={searchTerm} onSearch={setSearchTerm} />
+      <p>Searching for: {searchTerm}</p>
     </div>
   );
 }
